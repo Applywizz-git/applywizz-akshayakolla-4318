@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Luxury Portfolio Design System - Royal Blue & Gold */
+@layer base {
+  :root {
+    /* Color Palette - HSL conversions of exact HEX values */
+    --royal-blue: 210 88% 16%;        /* #0A2342 */
+    /* --luxury-gold: 51 100% 50%;       #FFD700 */
+    --luxury-gold: 51 90% 65%; /* ~#FFE66B */
+
+    --sapphire-blue: 223 74% 31%;     /* #1E3A8A */
+    --silver-mist: 0 0% 75%;          /* #C0C0C0 */
+    --midnight: 220 67% 5%;           /* #050A18 */
+    --ivory-white: 60 25% 98%;        /* #FAF9F6 */
+    --off-white: 220 13% 91%;         /* #E5E7EB */
+    --muted-silver: 220 9% 64%;       /* #9CA3AF */
+
+    /* Shadcn Base Tokens */
+    --background: 220 67% 5%;
+    --foreground: 220 13% 91%;
+
+    --card: 220 67% 8%;
+    --card-foreground: 220 13% 91%;
+
+    --popover: 220 67% 6%;
+    --popover-foreground: 220 13% 91%;
+
+    --primary: 210 88% 16%;
+    --primary-foreground: 51 100% 50%;
+
+    --secondary: 223 74% 31%;
+    --secondary-foreground: 220 13% 91%;
+
+    --muted: 220 67% 12%;
+    --muted-foreground: 220 9% 64%;
+
+    --accent: 51 100% 50%;
+    --accent-foreground: 220 67% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 220 13% 91%;
+
+    --border: 220 67% 15%;
+    --input: 220 67% 15%;
+    --ring: 51 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --gradient-blue: linear-gradient(135deg, hsl(210 88% 16%), hsl(223 74% 31%));
+    --gradient-gold: linear-gradient(135deg, hsl(51 100% 50%), hsl(45 100% 45%));
+    --gradient-radial: radial-gradient(circle at top right, hsl(210 88% 16% / 0.4), transparent 60%);
+    
+    --glass-bg: hsl(220 67% 8% / 0.6);
+    --glass-border: hsl(220 13% 91% / 0.1);
+    
+    --shadow-glow: 0 0 40px hsl(51 100% 50% / 0.3);
+    --shadow-elegant: 0 20px 60px -10px hsl(220 67% 5% / 0.5);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elastic: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 220 67% 5%;
+    --foreground: 220 13% 91%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+  }
+}
+
+@layer utilities {
+  /* Glass Effects */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glass-gold {
+    background: hsla(51, 100%, 50%, 0.073);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsl(51 100% 50% / 0.2);
+  }
+
+  /* Gradient Backgrounds */
+  .bg-gradient-blue {
+    background: var(--gradient-blue);
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-radial {
+    background: var(--gradient-radial);
+  }
+
+  /* Text Gradients */
+  .text-gradient-gold {
+    /* @apply bg-gradient-to-r from-[#FFD700] to-[#E6C200] bg-clip-text text-transparent; */
+/* @apply bg-gradient-to-r from-[#FFF6B0] to-[#FFE680] bg-clip-text text-transparent; */
+/* @apply bg-gradient-to-r from-[#FFECA1] to-[#FFD66B] bg-clip-text text-transparent; */
+/* @apply bg-gradient-to-r from-[#FFECA1] to-[#FFD66B] bg-clip-text text-transparent;
+@apply bg-gradient-to-r from-[#FFF4B0] to-[#FFD84D] bg-clip-text text-transparent;
+ */
+ /* @apply bg-gradient-to-r from-[#FFF4B0] to-[#FFD84D] bg-clip-text text-transparent;
+  */
+  @apply bg-gradient-to-r from-[#FFF7BF] to-[#FFC933] bg-clip-text text-transparent;
+  /* @apply bg-gradient-to-r from-[#FFF7CC] via-[#FFE45E] to-[#FFC300] bg-clip-text text-transparent; */
+
+
+
+
+
+
+  }
+
+  .text-gradient-blue {
+    @apply bg-gradient-to-r from-[#0A2342] to-[#1E3A8A] bg-clip-text text-transparent;
+  }
+
+  /* Glow Effects */
+  .glow-gold {
+    text-shadow: 0 0 20px hsl(51 100% 50% / 0.5);
+  }
+
+  .glow-blue {
+    text-shadow: 0 0 20px hsl(210 88% 16% / 0.5);
+  }
+
+  /* Transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-elastic {
+    transition: var(--transition-elastic);
+  }
+
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(220 67% 8%);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(51 100% 50%);
+    border-radius: 4px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(45 100% 45%);
+  }
+}
+
+/* AOS Custom Animations */
+[data-aos] {
+  transition-duration: 0.8s;
+}
+
+/* Parallax Container */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-bg {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  will-change: transform;
+}
