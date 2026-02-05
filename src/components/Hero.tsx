@@ -169,7 +169,7 @@ export const Hero = () => {
               className="relative w-72 h-72 lg:w-96 lg:h-96 rounded-2xl overflow-hidden border-2 border-luxury-gold/30 shadow-2xl z-10 cursor-pointer"
             >
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=800&fit=crop"
+                src="/profile.png"
                 alt="Akshaya Kolla"
                 className="w-full h-full object-cover"
               />
