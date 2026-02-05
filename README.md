@@ -4,6 +4,7 @@ Professional portfolio of **Akshaya Kolla**, a Senior Full Stack Software Engine
 
 ## 🚀 Technical Skills
 
+
 - **Backend:** Java (8/11/17), Spring Boot, Spring Security, Spring Data JPA, Microservices, RESTful APIs, Node.js.
 - **Frontend:** React.js, Redux Toolkit, TypeScript, Angular, HTML5, CSS3, Tailwind CSS.
 - **Cloud & DevOps:** AWS (EC2, S3, EKS, SQS), Azure (AKS, Blob Storage), Docker, Kubernetes, Jenkins, Terraform, CI/CD.
